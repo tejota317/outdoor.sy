@@ -1,0 +1,17 @@
+<div class='row'>
+  <div class='col-4'>
+    <%= form_for :customer_list, url: "list" do |f| %>
+      <div class="mb-3">
+        <%= f.label :sort, "Sort by:", {class: "form-label"}%>
+        <%= f.select :sort, {"Full Name": "full_name", "Vehicle Type": "vehicle_type" }, {}, {class: "form-select"}%>
+      </div>
+      <div class="mb-3">
+        <%= f.label :file, "Upload candidate file:", {class: "form-label"} %>
+        <%= f.file_field :file, {class: "form-control"}%>
+      </div>
+      <div class="mb-3">
+        <%= f.submit "Submit", {class: "btn btn-primary"}%>
+      </div>
+    <% end %>
+  </div>
+</div>

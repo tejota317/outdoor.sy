@@ -1,0 +1,45 @@
+<div>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">
+          <span>Full Name</span>
+        </th>
+        <th scope="col">
+          <span>Email</span>
+        </th>
+        <th scope="col">
+          <span>Vehicle Type</span>
+        </th>
+        <th scope="col">
+          <span>Vehicle Name</span>
+        </th>
+        <th scope="col">
+          <span>Vehicle Length</span>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @customers.each do |customer| %>
+        <tr>
+          <td>
+            <span><%= customer.full_name %></span>
+          </td>
+          <td>
+            <span><%= customer.email %></span>
+          </td>
+          <td>
+            <span><%= customer.vehicle_type %></span>
+          </td>
+          <td>
+            <span><%= customer.vehicle_name %></span>
+          </td>
+          <td>
+            <span><%= customer.vehicle_length %></span>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+  <%= link_to "Back", customer_path, {class: 'btn btn-primary'} %>
+</div>
