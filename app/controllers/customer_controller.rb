@@ -1,11 +1,11 @@
-require 'byebug'
-class CustomerController < ApplicationController
 
+class CustomerController < ApplicationController
+  include CustomerListMixin
   def index
   end
 
   def list
-    customers = Customer.parse_string_to_customers(params[:customer_list][:file])
-    @customers = customers.sort_by{|customer| eval("customer.#{params[:customer_list][:sort]}.downcase")}
+    customers = parse_string_to_customers(params[:customer_list][:file])
+    @customers = sort_customers(customers, params[:customer_list][:sort])
   end
 end

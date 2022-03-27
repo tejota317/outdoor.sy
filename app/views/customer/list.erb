@@ -23,19 +23,19 @@
       <% @customers.each do |customer| %>
         <tr>
           <td>
-            <span><%= customer.full_name %></span>
+            <span><%= customer[:full_name] %></span>
           </td>
           <td>
-            <span><%= customer.email %></span>
+            <span><%= customer[:email] %></span>
           </td>
           <td>
-            <span><%= customer.vehicle_type %></span>
+            <span><%= customer[:vehicle_type] %></span>
           </td>
           <td>
-            <span><%= customer.vehicle_name %></span>
+            <span><%= customer[:vehicle_name] %></span>
           </td>
           <td>
-            <span><%= customer.vehicle_length %></span>
+            <span><%= customer[:vehicle_length] %></span>
           </td>
         </tr>
       <% end %>
