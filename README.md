@@ -5,7 +5,7 @@ This application can be used to parse Outdoor.sy customer data files and output 
 There are two ways this application can be run:
 
 1. As a rails web application 
-  * To run:  `bin/rails s`
+    * To run:  `bin/rails s`
 
 2. As a rake task
-  * To run: `bundle exec rake customer:list[:path_to_file,:sort_by]`
+    * To run: `bundle exec rake customer:list[:path_to_file,:sort_by]`
