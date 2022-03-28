@@ -1,4 +1,4 @@
-# README
+# Outdoor.sy
 
 This application can be used to parse Outdoor.sy customer data files and output it into a readable format. The application expects data to be comma or pipe delimited and allows the user to provide an attribute to sort the data by.
 
